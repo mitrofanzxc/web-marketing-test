@@ -51,15 +51,16 @@ $transition-01: 0.1s;
 $transition-02: 0.2s;
 
 $color-black: rgba(0, 0, 0, 1);
-$color-dark: rgba(51, 51, 51, 1);
-$color-primary: rgba(86, 204, 242, 1);
-$color-link: rgba(47, 128, 237, 1);
-$color-visited: rgba(155, 81, 224, 1);
 $color-white: rgba(255, 255, 255, 1);
+$color-dark: rgba(51, 51, 51, 1);
 $color-default: rgba(79, 79, 79, 1);
+$color-grey: rgba(196, 196, 196, 1);
 $color-disabled: rgba(130, 130, 130, 1);
 $color-border: rgba(189, 189, 189, 1);
 $color-body: rgba(217, 217, 217, 1);
+$color-link: rgba(47, 128, 237, 1);
+$color-visited: rgba(155, 81, 224, 1);
+$color-primary: rgba(86, 204, 242, 1);
 
 $breakpoint-xxs-min: 320px;
 $breakpoint-xs-min: 480px;

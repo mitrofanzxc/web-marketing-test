@@ -210,6 +210,14 @@ textarea {
   background-color: $color-white;
 }
 
+.catalog-list__item-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
 .catalog-list__item-description {
   margin-top: 7px;
   font-size: $fs-s;
@@ -232,6 +240,27 @@ textarea {
 }
 
 // === / MAIN ===
+
+// === TAG ===
+
+.tag-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $base * 3;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $base $base * 2;
+  font-size: $fs-xs;
+  color: $color-white;
+  background-color: $color-grey;
+}
+
+// === TAG ===
 
 // === PAGINATION ===
 
