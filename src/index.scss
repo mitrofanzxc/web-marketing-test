@@ -32,6 +32,7 @@ body {
 }
 
 .wrapper {
+  max-width: $base * 228;
   margin: 0 auto;
 }
 
@@ -44,6 +45,12 @@ h6,
 button {
   @include roboto;
   margin: 0;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
 }
 
 .h1 {
@@ -66,8 +73,13 @@ button {
   font-weight: $fw-medium;
 }
 
-a {
-  text-decoration: none;
+.description {
+  font-size: $fs-s;
+  font-weight: $fw-light;
+  color: $color-disabled;
+}
+
+.link {
   color: $color-link;
   transition: all $transition-01;
 
@@ -80,6 +92,10 @@ a {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 input,
 select,
 textarea {
@@ -88,4 +104,158 @@ textarea {
   padding: 0.438rem 0.5rem;
 }
 
+.color_black {
+  color: $color-black;
+}
+
 // === / COMMON ===
+
+// === HEADER ===
+
+.header {
+  margin-top: $base * 8;
+  padding: $base * 8 0 $base * 8 $base * 3;
+  background-color: $color-white;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $base;
+}
+
+.header-list__item {
+  font-size: $fs-l;
+  font-weight: $fw-bold;
+  color: $color-black;
+}
+
+// === HEADER ===
+
+// === NAV ===
+
+.nav {
+  margin-top: $base * 4;
+  padding: $base * 3 0 $base * 3 $base * 3;
+  background-color: $color-white;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $base * 6;
+}
+
+// .nav-list__item {}
+
+.nav-list__link {
+  color: $color-disabled;
+  text-transform: uppercase;
+}
+
+// === / NAV ===
+
+// === BREADCRUMBS ===
+
+.breadcrumbs {
+  margin-top: 0;
+  padding: $base * 3 0 $base * 3 $base * 3;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $base * 2;
+}
+
+// .breadcrumbs-list__item {}
+
+.breadcrumbs-list__link {
+  font-size: $fs-xs;
+}
+
+// === BREADCRUMBS ===
+
+// === MAIN ===
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: $base * 3;
+  margin-top: $base * 3;
+}
+
+.catalog-list__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $base * 3;
+  width: 100%;
+  padding: $base * 3;
+  background-color: $color-white;
+}
+
+.catalog-list__item-description {
+  margin-top: 7px;
+  font-size: $fs-s;
+  font-weight: $fw-light;
+  color: $color-disabled;
+}
+
+.catalog-list__img {
+  width: 100%;
+  height: auto;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base;
+  font-size: $fs-m;
+  font-weight: $fw-medium;
+}
+
+// === / MAIN ===
+
+// === PAGINATION ===
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $base * 5;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $base * 3;
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $base * 7;
+  height: $base * 7;
+  background-color: $color-white;
+}
+
+// === / PAGINATION ===
