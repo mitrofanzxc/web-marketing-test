@@ -27,12 +27,15 @@
 
 body {
   @include roboto;
+  font-size: $fs-m;
+  font-weight: $fw-regular;
   background: $color-body;
   color: $color-default;
 }
 
 .wrapper {
   max-width: $base * 228;
+  width: 79.16666666666667%;
   margin: 0 auto;
 }
 
@@ -122,13 +125,23 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: $base;
 }
 
 .header-list__item {
   font-size: $fs-l;
   font-weight: $fw-bold;
   color: $color-black;
+
+  &::after {
+    content: '/';
+    margin: 0 $base;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 // === HEADER ===
@@ -168,10 +181,21 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: $base * 2;
+  // gap: $base * 2;
 }
 
-// .breadcrumbs-list__item {}
+.breadcrumbs-list__item {
+  &::after {
+    content: '>';
+    margin: 0 $base * 2;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
 
 .breadcrumbs-list__link {
   font-size: $fs-xs;
@@ -190,6 +214,8 @@ textarea {
 .catalog {
   display: flex;
   flex-direction: column;
+  flex-basis: 74.56140350877193%;
+  max-width: $base * 170;
 }
 
 .catalog-list {
@@ -205,7 +231,6 @@ textarea {
   align-items: flex-start;
   justify-content: space-between;
   gap: $base * 3;
-  width: 100%;
   padding: $base * 3;
   background-color: $color-white;
 }
@@ -230,6 +255,19 @@ textarea {
   height: auto;
 }
 
+.catalog-seo {
+  display: flex;
+  flex-direction: column;
+  gap: $base * 2;
+  max-width: $base * 113;
+  width: 66.47058823529412%;
+  margin-top: $base * 5;
+}
+
+.catalog-seo__item {
+  color: $color-default;
+}
+
 .price {
   display: flex;
   align-items: center;
@@ -240,6 +278,25 @@ textarea {
 }
 
 // === / MAIN ===
+
+// === FILTER ===
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 23.68421052631579%;
+  max-width: $base * 54;
+  margin-top: $base * 10;
+  padding: $base * 3 $base * 3 $base * 4 $base * 3;
+  background-color: $color-white;
+
+  .h4 {
+    padding-bottom: $base * 3;
+    border-bottom: 0.063rem solid $color-border;
+  }
+}
+
+// === FILTER ===
 
 // === TAG ===
 
@@ -278,13 +335,50 @@ textarea {
   gap: $base * 3;
 }
 
-.pagination-item {
+.pagination__item {
   display: flex;
   align-items: center;
   justify-content: center;
   width: $base * 7;
   height: $base * 7;
+  font-size: $fs-m;
+  font-weight: $fw-regular;
+  color: $color-black;
   background-color: $color-white;
 }
 
 // === / PAGINATION ===
+
+// === FOOTER ===
+
+.footer {
+  margin-top: $base * 5;
+  padding: $base * 8 $base * 3 $base * 5 $base * 4;
+  background-color: $color-white;
+}
+
+// === FOOTER ===
+
+// === COPYRIGHT ===
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $base * 2 0;
+}
+
+.copyright__item {
+  &::after {
+    content: '-';
+    margin: 0 $base;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// === COPYRIGHT ===
