@@ -220,7 +220,7 @@ textarea {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: $base * 4;
+  gap: $base * 4.5;
   margin-top: $base * 4;
 }
 
@@ -252,6 +252,7 @@ textarea {
 // .catalog-list__item-description__wrapper {}
 
 .catalog-list__item-description {
+  margin-top: $base;
   font-size: $fs-s;
   font-weight: $fw-light;
   color: $color-disabled;
@@ -298,7 +299,7 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-basis: 23.68421052631579%;
-  margin-top: $base * 12;
+  margin-top: $base * 11.5;
   padding: $base * 4 $base * 4 $base * 4 $base * 4;
   background-color: $color-white;
 
@@ -323,7 +324,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $base $base * 2;
+  padding: $base $base * 3;
   font-size: $fs-xs;
   color: $color-white;
   background-color: $color-grey;
@@ -357,9 +358,39 @@ textarea {
   font-weight: $fw-regular;
   color: $color-black;
   background-color: $color-white;
+  transition: all $transition-01;
+
+  &:active {
+    animation: onClick $transition-01 linear;
+  }
+}
+
+.pagination__item_active {
+  background-color: $color-primary;
+}
+
+.pagination__item_disabled {
+  color: $color-disabled;
 }
 
 // === / PAGINATION ===
+
+// === ANIMATIONS ===
+
+@keyframes onClick {
+  from {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  to {
+    position: relative;
+    top: 0.094rem;
+    left: 0.094rem;
+  }
+}
+
+// === / ANIMATIONS ===
 
 // === FOOTER ===
 
