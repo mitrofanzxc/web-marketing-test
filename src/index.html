@@ -59,20 +59,26 @@
             <button class="pagination__item pagination__item_active">1</button>
             <button class="pagination__item pagination__item_disabled">&gt;</button>
           </div>
-          <label class="sort"
-            >Sort by
-            <select name="sort">
-              <option value="">Sort options</option>
-              <option value="name">Name</option>
-              <option value="price">Price</option>
-              <option value="brand">Brand</option>
-              <option value="model">Model</option>
-              <option value="type">Type</option>
-              <option value="year">Year</option>
-              <option value="mileage">Mileage</option>
-              <option value="power">Power</option>
-            </select>
-          </label>
+          <div class="select-sort">
+            <p class="select-sort__label">Sort by</p>
+            <button class="select-sort__button">
+              <span class="select-sort__button-description">Sort options</span>
+              <div class="select-sort__button-icon"></div>
+              <div class="select-list__wrapper">
+                <ul class="select-list">
+                  <li class="select-list__item">Name</li>
+                  <li class="select-list__item">Price</li>
+                </ul>
+                <input
+                  type="text"
+                  name="select-sort__input"
+                  id="select-sort__input"
+                  value=""
+                  class="select-sort__input"
+                />
+              </div>
+            </button>
+          </div>
         </div>
         <ul class="catalog-list">
           <li class="catalog-list__item">
