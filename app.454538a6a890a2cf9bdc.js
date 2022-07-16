@@ -567,8 +567,8 @@ var removeSelectActive = function () {
 SELECT_SORT_BUTTON.addEventListener('click', addSelectActive);
 SELECT_LIST_ITEMS.forEach(function (item) {
     item.addEventListener('click', function (event) {
-        var target = event.target;
-        SELECT_SORT_BUTTON_DESCRIPTION.textContent = target.textContent;
+        var TARGET = event.target;
+        SELECT_SORT_BUTTON_DESCRIPTION.textContent = TARGET.textContent;
         removeSelectActive();
     });
 });
@@ -638,4 +638,4 @@ module.exports = __webpack_require__.p + "a25806274237d06e00a6.woff2";
 /******/ var __webpack_exports__ = (__webpack_exec__(975));
 /******/ }
 ]);
-//# sourceMappingURL=app.78e2b91eed6a7ba5009d.js.map
+//# sourceMappingURL=app.454538a6a890a2cf9bdc.js.map
