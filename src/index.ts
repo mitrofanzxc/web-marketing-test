@@ -18,8 +18,9 @@ SELECT_SORT_BUTTON.addEventListener('click', addSelectActive);
 
 SELECT_LIST_ITEMS.forEach((item) => {
   item.addEventListener('click', (event) => {
-    const target = event.target as HTMLLIElement;
-    SELECT_SORT_BUTTON_DESCRIPTION.textContent = target.textContent;
+    const TARGET = event.target as HTMLLIElement;
+
+    SELECT_SORT_BUTTON_DESCRIPTION.textContent = TARGET.textContent;
     removeSelectActive();
   });
 });
