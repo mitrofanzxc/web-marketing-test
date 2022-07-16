@@ -390,15 +390,6 @@ textarea {
   }
 }
 
-// @keyframes rotate90 {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(90deg);
-//   }
-// }
-
 // === / ANIMATIONS ===
 
 // === FOOTER ===
@@ -442,6 +433,7 @@ textarea {
 }
 
 .select-sort {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -455,14 +447,14 @@ textarea {
 }
 
 .select-sort__button {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: $base * 52;
   padding: $base * 2 $base * 3 $base * 2 $base * 3;
   background-color: $color-white;
-  border: 1px solid $color-border;
+  border: 0.063rem solid $color-border;
+  cursor: pointer;
   transition: all $transition-01;
 
   &:focus {
@@ -521,15 +513,37 @@ textarea {
 
 .select-list__wrapper {
   position: absolute;
-  top: $base * 10;
-  left: 0;
-  background-color: pink;
+  top: 0;
+  right: 0;
+  left: -0.063rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  color: $color-default;
+  text-align: left;
+  transition: all $transition-01;
+}
+
+.select-list__wrapper_active {
+  top: $base * 9;
+  visibility: visible;
+  opacity: 1;
+  transition: all $transition-01;
 }
 
 .select-list {
+  background-color: $color-white;
 }
 
 .select-list__item {
+  width: $base * 52;
+  margin-top: 0.063rem;
+  padding: $base * 2 $base * 3 $base * 2 $base * 3;
+  background-color: $color-white;
+  border: 0.063rem solid $color-border;
+  cursor: pointer;
 }
 
 // === SELECT_SORT ===
